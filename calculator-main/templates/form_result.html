@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    >
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Результат формы</title>
+    <link rel="stylesheet" href="../../static/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__text">
+          <h1>Расчитай энергоэффективность своего дома!</h1>
+          <p>Реши проблему излишнего электропотребления самостоятельно!</p>
+        </div>
+    </header>
+    <main>
+        {% block content %}
+        <h1>Спасибо за заполнение формы</h1>
+        <ul class="form-result">
+            <li class="form-result__item">
+                <p>Ваше имя:<span class="highlited"> {{name}}</span> </p>
+            </li>
+            <li class="form-result__item">
+                <p>Ваша электронная почта:<span class="highlited"> {{email}}</span> </p>
+            </li>
+            <li class="form-result__item">
+                <p>Ваш адрес:<span class="highlited"> {{address}}</span> </p>
+            </li>
+            <li class="form-result__item"> 
+                <p>Ваша дата:<span class="highlited"> {{date}}</span></p> 
+            </li> 
+        </ul>
+        {% endblock %}
+    </main>
+</body>
+</html>
